@@ -1,0 +1,41 @@
+
+server:
+  port: 8801
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/hotelapi
+    username: sun
+    password: rnrdj123
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  servlet:
+    multipart:
+      max-request-size: 10MB
+      enabled: true
+      max-file-size: 10MB
+      location: /Users/juyoungsun/work/fileUpload
+
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+
+
+jwt:
+  secret:
+    key: halo3030993
+
+
+logging:
+  level:
+    com.example.socialApi: debug
+
+
+com.example.hotelApi.path: /Users/juyoungsun/work/fileUpload
