@@ -51,7 +51,7 @@ public class RoomController {
     }
 
     @PostMapping(value = "/image")
-    public ResponseEntity<?> uploadImage(@RequestParam("image")MultipartFile file) throws IOException {
+    public ResponseEntity<?> uploadImage (@RequestParam("image")MultipartFile file) throws IOException {
         String s = roomService.uploadImage(file);
         return ResponseEntity.ok().body(s);
     }
